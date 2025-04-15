@@ -21,7 +21,6 @@ function App() {
         task : inputValue
       }
 
-
       newToDo.push(singleToDO)
       setToDoList(newToDo)
       console.log(toDoList)
@@ -38,7 +37,6 @@ function App() {
 
 
   const editListIndex = (item, index) =>{
-    //console.log('inside edit function', 'index is ', index , 'id is ', item.id)
     setEditIndex(index);
     setEditId(item.id)
     setInputValue(item.task)
@@ -50,15 +48,14 @@ function App() {
       id : editId,
       task : inputValue
     }
-    console.log('log for updated object after saving Item', updatedToDo);
+   
 
-    const saveItemList = toDoList.splice(editIndex, 1, updatedToDo)
+    const saveItemList = [...toDoList] 
     
-    console.log('updated list item after splicing', saveItemList)
-
+    saveItemList.splice(editIndex, 1, updatedToDo)
+  
     setToDoList(saveItemList)
-    console.log('New to do List after set Method' , toDoList)
-
+    
     setEditIndex(-1)
     setInputValue('')
   }

@@ -1,6 +1,6 @@
 
 const List =({toDoList, completeHandler, editListIndex}) => {
-    console.log('log after saving the new item' , toDoList)
+    
     return(
         <div class="m-2 p-2 flex flex-col text-center">
             <h1 class="text-white text-2xl">Tasks</h1>

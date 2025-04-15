@@ -1,8 +1,6 @@
 
 const Form = ({addItem, editIndex, inputValue, setInputValue, saveItem}) => {
 
-    
-
     return(
         <div class="m-4 flex flex-row justify-center">
             <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Insert your task here" class="p-2 border-amber-300 border-1px border-solid rounded-xl bg-amber-600 text-amber-50"></input>
